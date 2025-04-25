@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадьба Семёна и Динары</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-image: url('your-background.jpg'); /* Добавьте путь к вашему фото */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .overlay {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      margin: 0 auto;
+      max-width: 700px;
+      border-radius: 16px;
+      margin-top: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #a67c8a;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #a67c8a;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Семён Коркин и Динара Сагитова</h1>
+    <h2>Роспись — 6 августа 2025<br>Банкет — 8 августа 2025</h2>
+
+    <h2>Приглашение</h2>
+    <p>Дорогие гости! Мы будем рады видеть вас на нашем празднике. Пожалуйста, подтвердите своё участие и выберите блюда.</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Ваше имя</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="attendance">Вы придёте?</label>
+      <select name="attendance" id="attendance" required>
+        <option value="Да">Да</option>
+        <option value="Нет">Нет</option>
+      </select>
+
+      <label for="guests">Количество гостей (включая вас)</label>
+      <input type="number" name="guests" id="guests" min="1" max="10">
+
+      <label for="meal">Выберите блюдо</label>
+      <select name="meal" id="meal">
+        <!-- Здесь вы можете добавить свои блюда -->
+        <option value="Мясное">Мясное</option>
+        <option value="Рыбное">Рыбное</option>
+        <option value="Вегетарианское">Вегетарианское</option>
+      </select>
+
+      <label for="comments">Комментарии / пожелания</label>
+      <textarea name="comments" id="comments" rows="4"></textarea>
+
+      <button type="submit">Отправить</button>
+    </form>
+
+    <h2>Место проведения</h2>
+    <p>Скоро здесь появится адрес и карта 📍</p>
+    <!-- Вставьте свою ссылку на Google Maps ниже -->
+    <iframe src="https://www.google.com/maps/embed?pb=..."></iframe>
+  </div>
+</body>
+</html>
