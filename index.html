@@ -110,5 +110,40 @@
     <!-- Вставьте свою ссылку на Google Maps ниже -->
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2166.7265516662883!2d65.64949617673861!3d57.10753927361568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43bbe0ca4f51f325%3A0xa516fd2bcaa93e7c!2sGold%20City!5e0!3m2!1sru!2sru!4v1745603394858!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form"); // id вашей формы
+  const message = document.getElementById("form-message"); // блок для сообщений
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // остановить обычную отправку
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        message.textContent = "Спасибо! Ваше сообщение успешно отправлено.";
+        message.style.color = "green";
+        form.reset(); // очистить форму
+      } else {
+        message.textContent = "Произошла ошибка при отправке. Пожалуйста, попробуйте ещё раз.";
+        message.style.color = "red";
+      }
+    } catch (error) {
+      message.textContent = "Произошла ошибка сети. Пожалуйста, попробуйте ещё раз.";
+      message.style.color = "red";
+    }
+  });
+});
+</script>
 </body>
+  <div id="form-message" style="margin-top: 10px;"></div>
 </html>
