@@ -76,10 +76,7 @@
 <section>
   <h2>Подтвердите ваше присутствие</h2>
   <form id="contact-form" action="https://formspree.io/f/xqaqaeej" method="POST">
-    <input type="text" name="name" placeholder="Ваше имя" required>
-    <label for="guests">Количество гостей (включая вас)</label>
-    <input type="number" name="guests" id="guests" min="1" max="10">
-    
+    <input type="text" name="name" placeholder="Ваше имя" required>    
     <label for="attendance">Вы придёте?</label>
     <select name="attendance" id="attendance" required>
       <option value="">Выберите...</option>
@@ -87,6 +84,8 @@
       <option value="Нет">Нет</option>
       <option value="Ещё не уверен(а). Если вы не уверены заполните эту форму еще раз когда определитесь суки">Ещё не уверен(а)</option>
     </select>
+    <label for="guests">Количество гостей (включая вас)</label>
+    <input type="number" name="guests" id="guests" min="1" max="10">
 
     <label for="meal">Выберите блюдо:</label>
     <select name="meal" id="meal" required>
