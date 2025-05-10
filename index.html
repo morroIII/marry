@@ -69,35 +69,35 @@
 <body>
 
 <header>
-  <h1>Коркин Семён & Сагитова Динара</h1>
-  <h1>Приглашают вас на свадьбу</h1>
-  <p>Роспись: 6 августа 2025 | Банкет: 8 августа 2025</p>
+  <h1>Семён и Динара приглашают вас на торжество по случаю бракосочетания</h1>
+  <p>Регистрация в ЗАГСе: 17:30 6 августа 2025 | Банкет: 18:00 8 августа 2025</p>
 </header>
 
-<section>
-  <h2>Подтвердите ваше присутствие</h2>
-  <form id="contact-form" action="https://formspree.io/f/xqaqaeej" method="POST">
-    <input type="text" name="name" placeholder="Ваше имя" required>    
-    <label for="attendance">Вы придёте?</label>
-    <select name="attendance" id="attendance" required>
+<label>1) Ваше ФИО:</label>
+    <input type="text" name="name" placeholder="Иванов Иван Иванович" required>
+
+    <label>2) Пожалуйста, подтвердите ваше присутствие на свадебном банкете:</label>
+    <select name="attendance" required>
       <option value="">Выберите...</option>
-      <option value="Да">Да</option>
-      <option value="Нет">Нет</option>
-      <option value="Ещё не уверен(а)">Ещё не уверен(а). Если вы не уверены заполните эту форму еще раз когда определитесь суки</option>
-    </select>
-    <label for="guests">Количество гостей (включая вас)</label>
-    <input type="number" name="guests" id="guests" min="1" max="10">
-
-    <label for="meal">Выберите блюдо:</label>
-    <select name="meal" id="meal" required>
-      <option value="">Выберите блюдо...</option>
-      <!-- СЮДА ДОБАВИТЬ БЛЮДА -->
-      <option value="Блюдо 1">Блюдо 1</option>
-      <option value="Блюдо 2">Блюдо 2</option>
-      <option value="Блюдо 3">Блюдо 3</option>
+      <option value="Точно приду">Точно приду</option>
+      <option value="Еще не уверен">Еще не уверен</option>
+      <option value="Не приду">Не приду</option>
     </select>
 
-    <textarea name="message" placeholder="Ваши пожелания или вопросы..." rows="4"></textarea>
+    <label>3) В каком количестве вы придёте? Укажите отдельно взрослых и детей:</label>
+    <input type="text" name="guests" placeholder="Например: 2 взрослых, 1 ребёнок" required>
+
+    <label>4) Какой алкоголь вы предпочитаете?</label>
+    <select name="alcohol" required>
+      <option value="">Выберите...</option>
+      <option value="Вино красное">Вино красное</option>
+      <option value="Вино белое">Вино белое</option>
+      <option value="Водка">Водка</option>
+      <option value="Шампанское">Шампанское</option>
+      <option value="Самогон">Самогон</option>
+      <option value="Принесу своё">Принесу своё</option>
+      <option value="Не употребляю алкоголь">Не употребляю алкоголь</option>
+    </select>
 
     <button type="submit">Отправить</button>
   </form>
