@@ -73,37 +73,48 @@
   <p>Регистрация в ЗАГСе: 17:30 6 августа 2025 | Банкет: 18:00 8 августа 2025</p>
 </header>
 
-<label>1) Ваше ФИО:</label>
-    <input type="text" name="name" placeholder="Иванов Иван Иванович" required>
+<section>
+  <form id="contact-form" action="https://formspree.io/f/xqaqaeej" method="POST">
+    
+    <div class="form-group">
+      <label for="name">1) Ваше ФИО:</label>
+      <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" required>
+    </div>
 
-    <label>2) Пожалуйста, подтвердите ваше присутствие на свадебном банкете:</label>
-    <select name="attendance" required>
-      <option value="">Выберите...</option>
-      <option value="Точно приду">Точно приду</option>
-      <option value="Еще не уверен">Еще не уверен</option>
-      <option value="Не приду">Не приду</option>
-    </select>
+    <div class="form-group">
+      <label for="attendance">2) Пожалуйста, подтвердите ваше присутствие на свадебном банкете:</label>
+      <select id="attendance" name="attendance" required>
+        <option value="">Выберите...</option>
+        <option value="Точно приду">Точно приду</option>
+        <option value="Еще не уверен">Еще не уверен</option>
+        <option value="Не приду">Не приду</option>
+      </select>
+    </div>
 
-    <label>3) В каком количестве вы придёте? Укажите отдельно взрослых и детей:</label>
-    <input type="text" name="guests" placeholder="Например: 2 взрослых, 1 ребёнок" required>
+    <div class="form-group">
+      <label for="guests">3) В каком количестве вы придёте? Укажите отдельно взрослых и детей:</label>
+      <input type="text" id="guests" name="guests" placeholder="Например: 2 взрослых, 1 ребёнок" required>
+    </div>
 
-    <label>4) Какой алкоголь вы предпочитаете?</label>
-    <select name="alcohol" required>
-      <option value="">Выберите...</option>
-      <option value="Вино красное">Вино красное</option>
-      <option value="Вино белое">Вино белое</option>
-      <option value="Водка">Водка</option>
-      <option value="Шампанское">Шампанское</option>
-      <option value="Самогон">Самогон</option>
-      <option value="Принесу своё">Принесу своё</option>
-      <option value="Не употребляю алкоголь">Не употребляю алкоголь</option>
-    </select>
+    <div class="form-group">
+      <label for="alcohol">4) Какой алкоголь вы предпочитаете?</label>
+      <select id="alcohol" name="alcohol" required>
+        <option value="">Выберите...</option>
+        <option value="Вино красное">Вино красное</option>
+        <option value="Вино белое">Вино белое</option>
+        <option value="Водка">Водка</option>
+        <option value="Шампанское">Шампанское</option>
+        <option value="Самогон">Самогон</option>
+        <option value="Принесу своё">Принесу своё</option>
+        <option value="Не употребляю алкоголь">Не употребляю алкоголь</option>
+      </select>
+    </div>
 
     <button type="submit">Отправить</button>
+    <div id="form-message"></div>
   </form>
-
-  <div id="form-message"></div>
 </section>
+
 
 <section id="location">
   <h2>Мы будем очень рады, если вместо цветов вы подарите бутылочку алкоголя для нашей домашней коллекции</h2>
