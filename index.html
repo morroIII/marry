@@ -77,14 +77,14 @@
   <form id="contact-form" action="https://formspree.io/f/xqaqaeej" method="POST">
     
     <div class="form-group">
-      <label for="name">1) Ваше ФИО:</label>
-      <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" required>
+      <label for="name">Ваше имя и фамилия</label>
+      <input type="text" id="name" name="name" required placeholder="Например: Иванов Иван" />
     </div>
 
     <div class="form-group">
-      <label for="attendance">2) Пожалуйста, подтвердите ваше присутствие на свадебном банкете:</label>
+      <label for="attendance">Пожалуйста, подтвердите ваше присутствие на свадебном банкете</label>
       <select id="attendance" name="attendance" required>
-        <option value="">Выберите...</option>
+        <option value="">Выберите вариант</option>
         <option value="Точно приду">Точно приду</option>
         <option value="Еще не уверен">Еще не уверен</option>
         <option value="Не приду">Не приду</option>
@@ -92,14 +92,14 @@
     </div>
 
     <div class="form-group">
-      <label for="guests">3) В каком количестве вы придёте? Укажите отдельно взрослых и детей:</label>
-      <input type="text" id="guests" name="guests" placeholder="Например: 2 взрослых, 1 ребёнок" required>
+      <label for="guests">В каком количестве вы придёте? (взрослые и дети)</label>
+      <input type="text" id="guests" name="guests" placeholder="Например: 2 взрослых, 1 ребёнок" required />
     </div>
 
     <div class="form-group">
-      <label for="alcohol">4) Какой алкоголь вы предпочитаете?</label>
+      <label for="alcohol">Какой алкоголь вы предпочитаете?</label>
       <select id="alcohol" name="alcohol" required>
-        <option value="">Выберите...</option>
+        <option value="">Выберите вариант</option>
         <option value="Вино красное">Вино красное</option>
         <option value="Вино белое">Вино белое</option>
         <option value="Водка">Водка</option>
